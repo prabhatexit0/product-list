@@ -1,4 +1,4 @@
-type Product = {
+export type ProductType = {
   id: number;
   title: string;
   description: string;
@@ -10,4 +10,13 @@ type Product = {
   category: string;
   thumbnail: string;
   images: string[];
+};
+
+export type ResponseType = {
+  data: {
+    limit: number;
+    products: ProductType[];
+    skip: number;
+    total: number;
+  };
 };
